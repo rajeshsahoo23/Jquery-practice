@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Accordian UI</title>
+<link href="css/jquery-ui.min.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script>
+$(document).ready(function() {
+$("#tip, #tip2, #tip3").tooltip({
+show:"slideDown", hide:"explode"
+});
+});
+</script>
+<style type="text/css">
+.ui-tooltip{
+	background:rgba(236,15,235,1.00);
+	color:#fff;
+}
+</style>
+</head>
+<body>
+<a href="#" title="Rajesh Kumar Sahoo Project" id="tip">Click here</a><br>
+<a href="#" title="Rajesh Kumar Sahoo Project" id="tip2">Click here</a><br>
+<a href="#" title="Rajesh Kumar Sahoo Project" id="tip3">Click here</a>
+</body>
+</html>

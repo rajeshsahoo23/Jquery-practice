@@ -1,0 +1,43 @@
+<html>
+
+   <head>
+      <title>The jQuery Example</title>
+      
+		
+      <style>
+         div{padding:2px; border:2px solid #666;}
+      </style>
+   </head>
+	
+   <body>
+   <p>0</p>
+	<input type="text" class="inputBox">
+<button class="plus">+</button>	
+<script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		
+      <script type = "text/javascript">
+         $(document).ready(function() {
+		 //Clone and Remove Form Fields
+var i=0;
+$('.plus').on('click', function(e) { 
+i++;
+$('p').text(i);
+   var body= $('body').append('<div class="exercise"> <input type="text"> <button class="remove">x</button></div>');
+	if(i==5) {
+	alert("hello");
+	
+	 e.preventDefault();
+        body.stop();
+
+	}
+    return false; //prevent form submission
+});
+
+$('body').on('click','.remove', function() {
+    $(this).parent().remove();
+// return false; //prevent form submission
+});
+         });
+      </script>
+   </body>
+	</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<title>Todo List in JavaScript</title>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+.input-shadow {
+border-color:red;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<div class="col-md-8 col-md-offset-2">
+  <div class="col-md-12">
+   <h1>ToDo List - Jquery</h1>
+    <form>
+	 <div class="form-group">
+      <input id="Name"  class="form-control" type="text" name="name" placeholder="Name"/>
+      </div>
+	  <div class="form-group">
+	  <input id="Email"  class="form-control" type="text" name="Email" placeholder="Email"/>
+      </div> 
+	  <div class="form-group">
+	  <input id="Phone"  class="form-control" type="text" name="Phone" placeholder="Phone"/>
+      </div> 
+	  <input type="submit" value="Submit" id="buttonRegister" class="btn btn-primary"><span>&nbsp;|&nbsp;<span><input type="reset" value="reset" class="btn btn-primary">
+    </form>
+  </div>
+  <div class="col-md-12">
+	<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+		<th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+  </div>
+   </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+//Function register
+
+ $('#buttonRegister').click(function(event){
+
+	event.preventDefault();
+
+	var name = $("#Name").val();
+	var email = $("#Email").val();
+	var phone = $("#Phone").val();
+
+	if(name === '' || email === '' || phone === ''){
+		$("#Name").addClass('input-shadow');
+		$("#Email").addClass('input-shadow');
+		$("#Phone").addClass('input-shadow');
+		
+	}else{
+
+		$('.table tbody').append("<tr>"+
+							"<td>"+name+"</td>"+
+							"<td>"+email+"</td>"+
+							"<td>"+phone+"</td>"+"<td><span class='close'>x</span></td>"+
+						"<tr>");
+
+		$("#Name").removeClass('input-shadow');
+		$("#Email").removeClass('input-shadow');
+		$("#Phone").removeClass('input-shadow');
+	}
+
+	//clean input
+	$("#Name").val("");
+	$("#Email").val("");
+	$("#Phone").val("");
+
+	//remove taks
+	$('.close').click(function(){
+		$(this).closest('tr').fadeOut();
+	})
+});
+
+ //dagen drop
+ $(function() {  
+        $(".table").sortable();  
+ });  
+
+
+</script>
+
+</body>
+</html>

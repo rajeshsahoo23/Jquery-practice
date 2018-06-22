@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>The jQuery Example</title>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+var jq = $.noConflict();
+jq(document).ready(function(){
+    jq("button").click(function(){
+        jq("p").text("jQuery is still working!"
+		);
+    });
+});
+</script>
+</head>
+<body>
+<button>Click</button>
+<p>Hello</p>
+</body>
+</html>

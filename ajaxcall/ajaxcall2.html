@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calling Ajax in Jquery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+$(function(){
+ $("button").click(function(){
+ $.getJSON("json/employee.json", function(data, status){
+ console.log(data.emp1.firstName);
+ console.log(status)
+ });
+ });
+});
+</script>
+</head>
+<body>
+
+<p>If you click on me, I will disappear.</p>
+<button>Call Ajax</button>
+
+</body>
+</html>

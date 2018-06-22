@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+</style>
+
+</head>
+<body>
+<div class="container">
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<ul>
+<li>Rajesh</li>
+<li>Raju</li>
+<li>Raj</li>
+<li>Raju</li>
+<li>Ramesh</li>
+<li>Ramesh</li>
+<li>Raj</li>
+<li>Raju</li>
+<li>Person Name
+<ul class="list">
+<li>Rajesh</li>
+<li>Raju</li>
+<li>Raj</li>
+<li>Raju</li>
+<li>Ramesh</li>
+<li>Ramesh</li>
+</ul>
+</li>
+<li>Raj</li>
+<li>Raju</li>
+<li>Ramesh</li>
+</ul>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<input type="text"><br>
+<input type="password"><br>
+<textarea></textarea>
+<select>
+<option>Rajesh</option>
+<option selected>Raj</option>
+<option>Ramesh</option>
+</select>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+$(".list").find('li').filter(':odd').css({'background-color':'pink'});	
+$('li').filter(function(index){
+return index % 3 === 0; // if return true is the result
+}).css({'background-color':'pink'});
+$("li").first().css({'background-color':'green'});
+$("li").last().css({'background-color':'yellow'});
+$(".list li").not(':odd').css({'background-color':'#cacaca'});
+});
+
+</script>
+</body>
+</html>

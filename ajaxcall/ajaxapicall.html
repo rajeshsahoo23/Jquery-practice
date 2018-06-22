@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+
+    <title>How to Parse a JSON file using jQuery</title>
+    
+    <style>
+        body{
+            text-align: center;
+            font-family: arial;
+        }
+
+        .button{
+            margin:20px;
+            font-size:16px;
+            font-weight: bold;
+            padding:5px 10px;
+        }
+    </style>
+
+
+</head>
+<body>
+   <form id="form-input" method="post">
+   <input type="text" id="name">
+    <input type="submit" value="Get Data" name="submit" />
+    </form>
+    <table id="results" border="1">
+	
+	</table>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+
+    <script>
+  $(document).ready(function(){
+   $('#form-input').submit(function(e){
+     var name = $('#name').val();
+
+     $.ajax({
+	 url: "http://localhost/Jquery-practice/ajaxcall/api/viewdata.php",
+      type: 'post',
+      data: {name: name},
+      success: function(response, status){
+       // $('#results').text('name : ' + response);
+	   var datalist ='';
+		 var value=JSON.parse(response); // convert to javascript object
+console.log(response);		 
+	   datalist+='<tr>';
+				datalist+='<td>'+value[0].empName+'</td>';
+				datalist+='<td>'+value[0].empEmail+'</td>';
+				datalist+='<td>'+value[0].empPhone+'</td>';
+				datalist+='<td>'+value.empId+'</td>';
+				datalist+='<td>'+value[0].empDesign+'</td>';
+				datalist+='<td>'+value[0].empSalary+'</td>';
+				datalist+='</tr>';
+				$("#results").append(datalist);
+      }
+     });
+	 e.preventDefault();
+    });
+  });
+    </script>
+
+</body>
+</html>

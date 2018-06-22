@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+.blue-box, .red-box, .green-box {
+width:100px;
+height:100px;
+background-color:blue;
+color:#fff;
+display: flex;
+justify-content: center;
+align-items: center;
+margin:10px;
+}
+.red-box {
+background-color:red;
+}
+.green-box {
+background-color:green;
+}
+.light-box {
+width:100%;
+height:100%;
+position:absolute;
+left:0px;
+top:0px;
+background:rgba(0, 128, 0, 0.71);
+display:none;
+text-align:center;
+padding-top:10%;
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+<div class="container gallery">
+<div class="col-md-4"><img src="images/banner1.jpg" alt="Banner" class="img-responsive"></div>
+<div class="col-md-4"><img src="images/banner2.jpg" alt="Banner" class="img-responsive"></div>
+</div>
+<div class="light-box"></div>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<div class="red-box">Red Box</div>
+<div class="blue-box">Blue Box</div>
+<div class="red-box">Red Box</div>
+<div class="blue-box">Blue Box</div>
+<ul>
+<li>Rajesh</li>
+<li>Raju</li>
+<li>Raj</li>
+<li>Raju</li>
+<li>Ramesh</li>
+<li>Ramesh</li>
+<li>Raj</li>
+<li>Raju</li>
+<li>Person Name
+<ul class="list">
+<li>Rajesh</li>
+<li>Raju</li>
+<li>Raj</li>
+<li>Raju</li>
+<li>Ramesh</li>
+<li>Ramesh</li>
+</ul>
+</li>
+<li>Raj</li>
+<li>Ram Babu 
+<ul class="list2">
+<li>Rajesh</li>
+<li>Raju</li>
+<li>Raj</li>
+<li>Raju</li>
+<li>Ramesh</li>
+<li>Ramesh</li>
+</ul>
+</li>
+<li>Ramesh</li>
+</ul>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<input type="text"><br>
+<input type="password"><br>
+<textarea></textarea><br>
+<select>
+<option>Rajesh</option>
+<option selected>Raj</option>
+<option>Ramesh</option>
+</select>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){// DOM light-box Events
+var imgGallery= $('.gallery').find('img');
+imgGallery.css({"opacity":0.7});
+imgGallery.mouseenter(function(){
+$(this).stop().fadeTo(500, 1);
+});
+imgGallery.mouseleave(function(){
+$(this).stop().fadeTo(500, 0.7);
+});
+imgGallery.click(function(){
+var imgSource = $(this).attr('src');
+var bigImg = $('<img>').attr('src', imgSource).css({'width': "500px", 'height': "300px"});
+$('.light-box').fadeIn(2000).html(bigImg);
+$('.light-box').click(function(){
+$(this).stop().fadeOut();
+});
+})
+});
+
+</script>
+</body>
+</html>

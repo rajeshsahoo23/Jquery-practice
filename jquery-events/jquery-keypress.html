@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+.blue-box, .red-box, .green-box {
+width:100px;
+height:100px;
+background-color:blue;
+color:#fff;
+display: flex;
+justify-content: center;
+align-items: center;
+margin:10px;
+}
+.red-box {
+background-color:red;
+}
+.green-box {
+background-color:green;
+}
+
+</style>
+
+</head>
+<body>
+<div class="container">
+
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<div class="red-box">Red Box</div>
+<div class="blue-box">Blue Box</div>
+<div class="red-box">Red Box</div>
+<div class="blue-box">Blue Box</div>
+<ul>
+<li>Rajesh</li>
+<li>Raju</li>
+<li>Raj</li>
+<li>Raju</li>
+<li>Ramesh</li>
+<li>Ramesh</li>
+<li>Raj</li>
+<li>Raju</li>
+<li>Person Name
+<ul class="list">
+<li>Rajesh</li>
+<li>Raju</li>
+<li>Raj</li>
+<li>Raju</li>
+<li>Ramesh</li>
+<li>Ramesh</li>
+</ul>
+</li>
+<li>Raj</li>
+<li>Ram Babu 
+<ul class="list2">
+<li>Rajesh</li>
+<li>Raju</li>
+<li>Raj</li>
+<li>Raju</li>
+<li>Ramesh</li>
+<li>Ramesh</li>
+</ul>
+</li>
+<li>Ramesh</li>
+</ul>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<input type="text"><br>
+<input type="password"><br>
+<textarea></textarea><br>
+<select>
+<option>Rajesh</option>
+<option selected>Raj</option>
+<option>Ramesh</option>
+</select>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(function(){// DOM light-box Events
+$('html').keydown(function(){
+alert("You had keypress");
+});
+var inputArea = $('input:text, input:password, textarea');
+inputArea.focus(function(){
+$(this).css({
+'border':'1px solid blue', 'box-shadow':'2px 2px 2px #000'
+});
+});
+inputArea.blur(function(){
+$(this).css({
+'border':'1px solid #ccc', 'box-shadow':'none'
+});
+});
+/* $('select').change(function(){
+alert((this).value);
+});*/
+ $('select').change(function(){
+alert($(this).find(':selected').val());
+});
+});
+
+</script>
+</body>
+</html>

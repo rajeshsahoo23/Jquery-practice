@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation jQuery:Demo Preview</title>
+<meta content="noindex, nofollow" name="robots">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+<h1>Form Validation Using jQuery</h1>
+<div id="form">
+<form id="form-input" action="#" method="post"> <!-- Form Starts From Here -->
+<label>Full Name:</label>
+<input id='firstname' type='text'>
+<p id="p1"></p> <!--This Segment Displays The Validation Rule For Name-->
+<label>Username(6-8 characters):</label>
+<input id='username' type='text'>
+<p id="p2"></p> <!-- This Segment Displays The Validation Rule For User Name -->
+<label>Address:</label>
+<input id='addr' type='text'>
+<p id="p3"></p> <!-- This Segment Displays The Validation Rule For Address -->
+<input type="Submit" id="submit" value="Submit">
+</form>
+</div>
+<script>
+$(document).ready(function(){
+$('#form-input').submit(function(event){
+var name= $('#firstname').val();
+var uname= $('#username').val();
+var add= $('#addr').val();
+inputName(name, event);
+userName(uname, event);
+address(add, event);
+});
+});
+
+function inputName(name, event){
+if(!(name) || name.length <= 2){
+$('#p1').css({'color':'red'}).text("Enter your First Name must more than 2 character");
+event.preventDefault();
+}
+ else{
+$('#p1').text("");
+}
+}
+function userName(uname, event){
+if(!(uname) || uname.length <= 6 ){
+$('#p2').css({'color':'red'}).text("Enter your User Name must more than 6 character must alphabet");
+event.preventDefault();
+}
+ else{
+$('#p2').text("");
+}
+}
+function address(add, event){
+if(!(add) || add.length <= 6 ){
+$('#p3').css({'color':'red'}).text("Enter your Address");
+event.preventDefault();
+}
+ else{
+$('#p3').text("");
+}
+}
+</script>
+</body>
+</html>

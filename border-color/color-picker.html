@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Border Change in Javascript</title>
+<script src="js/jquery-1.11.3.min1.js"></script>
+<script>
+function colorchange(){
+	var color = document.getElementById("color").value;
+	document.getElementById("myDiv").style.backgroundColor = color;
+	document.getElementById("ramij-profile").style.borderColor = color;
+}
+</script>
+<style>
+#myDiv {
+	height:100px;
+	width:100px;
+	background:#ccc;
+	border:5px solid #000;
+}
+#ramij-profile {
+	border:5px solid #ccc;
+}
+</style>
+</head>
+<body>
+<input type="color" id="color">
+<input type="button" value="Change Border Color" onClick="colorchange()">-
+<div id="myDiv"></div>
+<br>
+<img src="images/profile-view.jpg" alt="Ramij" id="ramij-profile">
+</body>
+</html>

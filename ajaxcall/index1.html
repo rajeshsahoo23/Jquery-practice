@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calling Ajax in Jquery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+$(function(){
+   $.ajax({
+   type:'GET',
+   url:'json/details.json',
+   success:function(data){
+   document.getElementById("name").innerHTML= data.name;
+    document.getElementById("age").innerHTML= data.age;
+	document.getElementById("city").innerHTML= data.city;
+   }
+   });
+});
+</script>
+</head>
+<body>
+
+<p>If you click on me, I will disappear.</p>
+<p id="name"></p>
+<p id="age"></p>
+<p id="city"></p>
+
+</body>
+</html>

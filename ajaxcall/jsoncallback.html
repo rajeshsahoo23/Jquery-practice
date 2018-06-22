@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+
+    <title>How to Parse a Ajax JSON file using jQuery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+<div class="container" id="gallery">
+<div class="row">
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+
+        //When DOM loaded we attach click event to button
+        $(document).ready(function() {
+                var url = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+				$.getJSON(url, { tag:'', tagmode:'any', format:'json' // calling parameter
+				}).done(function(data){  // data represent all objects
+				console.log(data);
+				var imgSet ='';
+				$.each(data.items, function(index, value){ // data.items all items inside object here item is a keyid
+				imgSet += '<div class="col-md-3">';
+				imgSet += '<img class="img-responsive" src='+ value.media.m +'>';
+				imgSet += '<p class="text-primary">'+ value.title + '</p>';
+				imgSet += value.date_taken;
+				imgSet += '</div>';
+				$(".row").append(imgSet);
+				});
+				}).fail(function(){
+				alert("failed to get data");
+				});
+            });
+    </script>
+
+</body>
+</html>

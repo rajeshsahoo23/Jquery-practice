@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+
+    <title>How to Parse a Ajax JSON file using jQuery</title>
+    
+
+
+
+</head>
+<body>
+	<code style="border:1px solid #ccc;height:200px;width:300px;"></code>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+
+        //When DOM loaded we attach click event to button
+        $(document).ready(function() {
+                $('code').load("../json/object.json", function(data, status){
+				if(status == "error") {
+				alert("error in loading")
+				}
+				});
+              
+            });
+    </script>
+
+</body>
+</html>

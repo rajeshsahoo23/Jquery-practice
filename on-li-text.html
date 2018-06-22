@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('ul').on("click", "li", function() {
+        alert($(this).text());
+    });
+});
+</script>
+</head>
+<body>
+<p>I see there's a new method .on() in jQuery 1.7 that replaces the .live() in earlier versions.</p>
+<ul>
+<li>rrrr</li>
+<li>rajuu</li>
+</ul>
+</html>

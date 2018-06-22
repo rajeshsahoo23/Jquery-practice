@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+
+</style>
+
+</head>
+<body>
+<div class="container">
+<div class="gallery">
+<img src="images/banner1.jpg" alt="Banner">
+</div>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<input type="text"><br>
+<input type="password"><br>
+<textarea></textarea><br>
+<select>
+<option>Rajesh</option>
+<option selected>Raj</option>
+<option>Ramesh</option>
+</select>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){ // Image Slider
+var imgGallery = $('.gallery').find('img').first();
+var images =[
+"images/banner1.jpg",
+"images/banner2.jpg"
+];
+var i =0;
+setInterval(function(){
+i= (i+1)% images.length;
+console.log(i);
+imgGallery.fadeOut(function(){
+$(this).attr('src', images[i]).fadeIn();
+});
+},1000);
+});
+
+</script>
+</body>
+</html>

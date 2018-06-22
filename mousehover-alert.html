@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Jquery</title>
+<style type="text/css">
+h2 {
+	color:#666;
+	border:1px solid #CCC;
+	color:#000;
+	background:#FF0;
+}
+body {
+	text-align:center;
+}
+</style>
+</head>
+
+<body>
+<h2>Rajesh Kumar Sahoo</h2>
+<p class="click1">Click to See my Name</p>
+<img src="image/logo.png" alt="Image">
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("img").mouseenter(function(){
+		$(this).css(
+		{
+			'transform':'scale(2.2)',
+			'transition':'0.5s ease'
+		}
+		);
+	}
+	
+	);
+	$("img").mouseleave(function(){
+		$(this).css(
+		{
+			'transform':'scale(1.1)',
+			'transition':'0.5s ease'
+		}
+		);
+	}
+	
+	);
+}
+);
+</script>
+</body>
+</html>

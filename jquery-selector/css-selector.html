@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+</style>
+
+</head>
+<body>
+<div class="container">
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<ul>
+<li>Rajesh</li>
+<li>Raju</li>
+<li>Raj</li>
+<li>Raju</li>
+<li>Ramesh</li>
+<li>Ramesh</li>
+<li>Raj</li>
+<li>Raju</li>
+<li>Ramesh</li>
+<li>Raj</li>
+<li>Raju</li>
+<li>Ramesh</li>
+</ul>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<p>Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript
+Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript Latest compiled and minified JavaScript</p>
+<input type="text"><br>
+<input type="password"><br>
+<textarea></textarea>
+<select>
+<option>Rajesh</option>
+<option selected>Raj</option>
+<option>Ramesh</option>
+</select>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+$("p").css({'font-size':'18px','color':'blue'});
+$("p:first").css({'font-size':'20px','color':'green'});
+$("p:nth-child(2)").css({'font-size':'22px','color':'red'});
+$("p:nth-of-type(4)").css({'font-size':'22px','color':'red','background-color':'yellow'});
+$("li:odd").css({'color':'green', 'background-color':'yellow'});
+$("input[type='text']").css({'color':'green', 'border':'1px solid blue'});
+$("input:password").css({'color':'green', 'border':'1px solid green'});
+$("input:selected").css({'color':'green', 'border':'1px solid green'});
+
+$("li").click(function(){
+    var str = $(this).index(); // li always start with 0 index
+    alert(str);
+});
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Accordian UI</title>
+<link href="jquery-ui.min.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script>
+$(document).ready(function() {
+$("#mybox").dialog({
+	show:"puff", hide:"fold"
+	});
+});
+</script>
+<style type="text/css">
+.ui-dialog {
+	background:#FCF8F8;
+}
+</style>
+</head>
+<body>
+<div id="mybox" title="Login">
+Username<br><input type="text"><br>Password<br><input type="password"><br><input type="submit" value="submit">
+</div>
+</body>
+</html>

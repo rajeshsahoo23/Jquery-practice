@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Accordian UI</title>
+<link href="css/jquery-ui.min.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script>
+$(document).ready(function() {
+$("#mytabs").tabs();
+});
+</script>
+<style type="text/css">
+.ui-tabs {
+	border:1px solid #ED1B1E;
+}
+.ui-tabs .ui-tabs-nav {
+	background:rgba(207,249,157,1.00);
+}
+.ui-tabs .ui-tabs-nav li a{
+	background:rgba(253,13,237,1.00);
+}
+</style>
+</head>
+<body>
+<div id="mytabs">
+<ul>
+<li><a href="#tab1">Tab1</a></li>
+<li><a href="#tab2">Tab2</a></li>
+<li><a href="#tab3">Tab3</a></li>
+</ul>
+<div id="tab1"><p>rajesh kumar sahoo 1</p></div>
+<div id="tab2"><p>rajesh kumar sahoo 2</p></div>
+<div id="tab3"><p>rajesh kumar sahoo 3</p></div>
+</div>
+</body>
+</html>
